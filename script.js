@@ -65,7 +65,7 @@ function enlargeYesButton() {
 function displayImage() {
     var imageContainer = document.getElementById('image-container');
     var image = new Image();
-    image.src = 'IMG.9475.JPG'; 
+    image.src = 'IMG.9475.jpg'; 
     image.alt = 'Main Image';
     image.onload = function() {
         imageContainer.appendChild(image);
@@ -87,7 +87,7 @@ function displayCatHeart() {
 function displayNoReaction() {
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'IMG_7609.JPG';
+    noImage.src = 'IMG_7609.jpg';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
