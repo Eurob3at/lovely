@@ -65,7 +65,7 @@ function enlargeYesButton() {
 function displayMainImage() {
     var textContainer = document.getElementById('text-container');
     var image = new Image();
-    image.src = 'IMG_9475.jpg'; 
+    image.src = 'happyvarun.gif'; 
     image.alt = 'Main Image';
     image.style.display = 'block';
     image.style.marginBottom = '20px';
@@ -95,7 +95,7 @@ function displayCatHeart() {
 function displayNoReaction() {
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'IMG_7609.jpg';
+    noImage.src = 'sadgevarun.jpg';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
