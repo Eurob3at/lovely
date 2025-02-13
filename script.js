@@ -3,7 +3,7 @@
 let noClickCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
-    displayCat();
+    displayImage();
 });
 
 function selectOption(option) {
@@ -62,15 +62,13 @@ function enlargeYesButton() {
     yesButton.style.fontSize = '200px';
 }
 
-
-
-function displayCat() {
+function displayImage() {
     var imageContainer = document.getElementById('image-container');
-    var catImage = new Image();
-    catImage.src = 'IMG_7609.JPG';
-    catImage.alt = 'Cat';
-    catImage.onload = function() {
-        imageContainer.appendChild(catImage);
+    var image = new Image();
+    image.src = 'IMG.9475.JPG'; 
+    image.alt = 'Main Image';
+    image.onload = function() {
+        imageContainer.appendChild(image);
     };
 }
 
@@ -89,7 +87,7 @@ function displayCatHeart() {
 function displayNoReaction() {
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'no-reaction.gif';
+    noImage.src = 'IMG_7609.JPG';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
