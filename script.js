@@ -66,10 +66,12 @@ function displayImage() {
     document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
     var image = new Image();
-    image.src = 'IMG_9475.jpg'; 
+    image.src = 'IMG_9475.JPG'; 
     image.alt = 'Main Image';
     image.onload = function() {
         imageContainer.appendChild(image);
+        document.getElementById('options').style.display = 'none';
+
     };
 }
 
@@ -91,6 +93,7 @@ function displayCatHeart() {
         textBox.style.width = '80%';
         textBox.style.height = '100px';
         imageContainer.appendChild(textBox);
+        
     };
 }
 
@@ -98,10 +101,12 @@ function displayNoReaction() {
     document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'IMG_7609.jpg';
+    noImage.src = 'IMG_7609.JPG';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
         imageContainer.appendChild(noImage);
+        document.getElementById('options').style.display = 'none';
+
     };
 }
