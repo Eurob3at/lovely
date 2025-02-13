@@ -2,7 +2,6 @@
 
 let noClickCount = 0;
 displayMainImage();
-
 document.addEventListener("DOMContentLoaded", function() {
 });
 
@@ -65,7 +64,7 @@ function enlargeYesButton() {
 function displayMainImage() {
     var textContainer = document.getElementById('text-container');
     var image = new Image();
-    image.src = 'happyvarun.gif'; 
+    image.src = 'happyvarun.jpg'; 
     image.alt = 'Main Image';
     image.style.display = 'block';
     image.style.marginBottom = '20px';
