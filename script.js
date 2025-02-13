@@ -3,7 +3,7 @@
 let noClickCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
-    displayImage();
+    displayMainImage();
 });
 
 function selectOption(option) {
@@ -62,14 +62,14 @@ function enlargeYesButton() {
     yesButton.style.fontSize = '200px';
 }
 
-function displayImage() {
-    var imageContainer = document.getElementById('image-container');
+function displayMainImage() {
+    var textContainer = document.getElementById('text-container');
     var image = new Image();
-    image.src = 'IMG_9475.jpg'; 
+    image.src = 'IMG_9475.JPG'; 
     image.alt = 'Main Image';
-    image.onload = function() {
-        imageContainer.appendChild(image);
-    };
+    image.style.display = 'block';
+    image.style.marginBottom = '20px';
+    textContainer.insertBefore(image, textContainer.firstChild);
 }
 
 function displayCatHeart() {
@@ -84,7 +84,7 @@ function displayCatHeart() {
         
         // Display a text message below the image
         var textMessage = document.createElement('p');
-        textMessage.innerText = 'I LOVE YOU!!!!!!';
+        textMessage.innerText = 'I LOVE YOU!!!!!';
         textMessage.style.marginTop = '20px';
         textMessage.style.fontSize = '24px';
         textMessage.style.fontWeight = 'bold';
@@ -95,7 +95,7 @@ function displayCatHeart() {
 function displayNoReaction() {
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'IMG_7609.jpg';
+    noImage.src = 'IMG_7609.JPG';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
