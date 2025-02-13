@@ -63,15 +63,12 @@ function enlargeYesButton() {
 }
 
 function displayImage() {
-    document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
     var image = new Image();
-    image.src = 'IMG_9475.JPG'; 
+    image.src = 'IMG_9475.jpg'; 
     image.alt = 'Main Image';
     image.onload = function() {
         imageContainer.appendChild(image);
-        document.getElementById('options').style.display = 'none';
-
     };
 }
 
@@ -85,28 +82,23 @@ function displayCatHeart() {
         imageContainer.appendChild(catHeartImage);
         document.getElementById('options').style.display = 'none';
         
-        // Create a text box below the image
-        var textBox = document.createElement('textarea');
-        textBox.placeholder = 'I LOVE YOU!!!!!';
-        textBox.style.display = 'block';
-        textBox.style.marginTop = '20px';
-        textBox.style.width = '80%';
-        textBox.style.height = '100px';
-        imageContainer.appendChild(textBox);
-        
+        // Display a text message below the image
+        var textMessage = document.createElement('p');
+        textMessage.innerText = 'Yay! I knew you would say yes!';
+        textMessage.style.marginTop = '20px';
+        textMessage.style.fontSize = '24px';
+        textMessage.style.fontWeight = 'bold';
+        imageContainer.appendChild(textMessage);
     };
 }
 
 function displayNoReaction() {
-    document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'IMG_7609.JPG';
+    noImage.src = 'IMG_7609.jpg';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
         imageContainer.appendChild(noImage);
-        document.getElementById('options').style.display = 'none';
-
     };
 }
