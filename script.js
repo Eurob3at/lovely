@@ -3,7 +3,6 @@
 let noClickCount = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
-    displayTopImage();
     displayCat();
 });
 
