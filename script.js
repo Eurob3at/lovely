@@ -63,9 +63,10 @@ function enlargeYesButton() {
 }
 
 function displayImage() {
+    document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
     var image = new Image();
-    image.src = 'IMG.9475.JPG'; 
+    image.src = 'IMG_9475.jpg'; 
     image.alt = 'Main Image';
     image.onload = function() {
         imageContainer.appendChild(image);
@@ -81,13 +82,23 @@ function displayCatHeart() {
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
         document.getElementById('options').style.display = 'none';
+        
+        // Create a text box below the image
+        var textBox = document.createElement('textarea');
+        textBox.placeholder = 'I LOVE YOU!!!!!';
+        textBox.style.display = 'block';
+        textBox.style.marginTop = '20px';
+        textBox.style.width = '80%';
+        textBox.style.height = '100px';
+        imageContainer.appendChild(textBox);
     };
 }
 
 function displayNoReaction() {
+    document.getElementById('image-container').innerHTML = '';
     var imageContainer = document.getElementById('image-container');
     var noImage = new Image();
-    noImage.src = 'IMG_7609.JPG';
+    noImage.src = 'IMG_7609.jpg';
     noImage.alt = 'No Reaction';
     imageContainer.innerHTML = '';
     noImage.onload = function() {
