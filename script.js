@@ -2,6 +2,11 @@
 
 let noClickCount = 0;
 
+document.addEventListener("DOMContentLoaded", function() {
+    displayTopImage();
+    displayCat();
+});
+
 function selectOption(option) {
     if (option === 'yes') {
         flashRainbowColors(function() {
@@ -10,6 +15,7 @@ function selectOption(option) {
         });
     } else if (option === 'no') {
         noClickCount++;
+        displayNoReaction();
         if (noClickCount === 1) {
             document.getElementById('no-button').innerText = 'You sure?';
         } else if (noClickCount >= 2 && noClickCount < 10) {
@@ -54,9 +60,17 @@ function moveNoButton() {
 
 function enlargeYesButton() {
     let yesButton = document.getElementById('yes-button');
-    let currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-    let newSize = parseFloat(currentFontSize) * 2;
-    yesButton.style.fontSize = newSize + 'px';
+    yesButton.style.fontSize = '200px';
+}
+
+function displayTopImage() {
+    var topImageContainer = document.getElementById('top-image-container');
+    var topImage = new Image();
+    topImage.src = 'IMG_7609.JPG'; 
+    topImage.alt = 'Top Image';
+    topImage.onload = function() {
+        topImageContainer.appendChild(topImage);
+    };
 }
 
 function displayCat() {
@@ -81,4 +95,13 @@ function displayCatHeart() {
     };
 }
 
-displayCat();
+function displayNoReaction() {
+    var imageContainer = document.getElementById('image-container');
+    var noImage = new Image();
+    noImage.src = 'no-reaction.gif';
+    noImage.alt = 'No Reaction';
+    imageContainer.innerHTML = '';
+    noImage.onload = function() {
+        imageContainer.appendChild(noImage);
+    };
+}
