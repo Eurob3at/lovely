@@ -1,9 +1,9 @@
 // script.js
 
 let noClickCount = 0;
+displayMainImage();
 
 document.addEventListener("DOMContentLoaded", function() {
-    displayMainImage();
 });
 
 function selectOption(option) {
