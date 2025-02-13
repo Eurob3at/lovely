@@ -84,7 +84,7 @@ function displayCatHeart() {
         
         // Display a text message below the image
         var textMessage = document.createElement('p');
-        textMessage.innerText = 'Yay! I knew you would say yes!';
+        textMessage.innerText = 'I LOVE YOU!!!!!!';
         textMessage.style.marginTop = '20px';
         textMessage.style.fontSize = '24px';
         textMessage.style.fontWeight = 'bold';
