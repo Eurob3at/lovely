@@ -8,15 +8,18 @@ function selectOption(option) {
     if (option === 'yes') {
         // Flash rainbow colors
         flashRainbowColors(function() {
-            document.getElementById('question').style.display = 'none'; // Hide the question
-            displayCatHeart(); // Display the cat-heart.gif
+            document.getElementById('question').style.display = 'none'; //hiding question 
+            displayCatHeart(); 
         });
     } else if (option === 'no') {
         noClickCount++;
         if (noClickCount === 1) {
             document.getElementById('no-button').innerText = 'You sure?';
-        } else if (noClickCount >= 2) {
+        } else if (noClickCount >= 2 && noClickCount < 10) {
             moveNoButton();
+        } else if (noClickCount >= 10) {
+            document.getElementById('no-button').style.display = 'none'; // Hide the "No" button
+            enlargeYesButton(); // Make the "Yes" button bigger
         }
     } else {
         // If neither "Yes" nor "No" was clicked, show an alert message
@@ -53,6 +56,14 @@ function moveNoButton() {
     noButton.style.position = 'absolute';
     noButton.style.left = randomX + 'px';
     noButton.style.top = randomY + 'px';
+}
+
+// Function to enlarge the "Yes" button
+function enlargeYesButton() {
+    let yesButton = document.getElementById('yes-button');
+    let currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
+    let newSize = parseFloat(currentFontSize) * 2;
+    yesButton.style.fontSize = newSize + 'px';
 }
 
 // Function to display the cat.gif initially

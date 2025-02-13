@@ -1,7 +1,7 @@
 /* style.css */
 
 body {
-    font-family: Arial, sans-serif; /* Fallback font family */
+    font-family: 'EB Garamond', serif; /* Updated to EB Garamond */
     text-align: center; /* Center-align text */
     margin: 0; /* Remove default margin */
     background-color: #FADADD; /* Set background color to light pink */
@@ -20,7 +20,7 @@ body {
 }
 
 #question {
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the question */
+    font-family: 'EB Garamond', serif; /* Updated to EB Garamond */
     font-size: 52px; /* Set font size for the question */
 }
 
@@ -32,7 +32,7 @@ button {
     padding: 10px 20px; /* Set padding for buttons */
     margin: 0 10px; /* Set margin around buttons */
     font-size: 26px; /* Set font size for buttons */
-    font-family: 'Sacramento', cursive; /* Apply Sacramento font to the options */
+    font-family: 'EB Garamond', serif; /* Updated to EB Garamond */
     background-color: #FB607F; /* Set button background color */
     color: white; /* Set text color to white */
     border: none; /* Remove button border */
