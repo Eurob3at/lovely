@@ -1,5 +1,7 @@
 // script.js
 
+let noClickCount = 0;
+
 // Function to handle button click events
 function selectOption(option) {
     // Check which option was clicked
@@ -10,13 +12,12 @@ function selectOption(option) {
             displayCatHeart(); // Display the cat-heart.gif
         });
     } else if (option === 'no') {
-        // Change text on the "No" button to "You sure?"
-        document.getElementById('no-button').innerText = 'You sure?'; 
-        // Increase font size of "Yes" button
-        var yesButton = document.getElementById('yes-button');
-        var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
-        yesButton.style.fontSize = newSize + 'px';
+        noClickCount++;
+        if (noClickCount === 1) {
+            document.getElementById('no-button').innerText = 'You sure?';
+        } else if (noClickCount >= 2) {
+            moveNoButton();
+        }
     } else {
         // If neither "Yes" nor "No" was clicked, show an alert message
         alert('Invalid option!');
@@ -38,6 +39,20 @@ function flashRainbowColors(callback) {
             callback();
         }
     }, 2000); // Flash colors for 2 seconds
+}
+
+// Function to move the "No" button randomly
+function moveNoButton() {
+    let noButton = document.getElementById('no-button');
+    let maxX = window.innerWidth - noButton.clientWidth;
+    let maxY = window.innerHeight - noButton.clientHeight;
+    
+    let randomX = Math.floor(Math.random() * maxX);
+    let randomY = Math.floor(Math.random() * maxY);
+    
+    noButton.style.position = 'absolute';
+    noButton.style.left = randomX + 'px';
+    noButton.style.top = randomY + 'px';
 }
 
 // Function to display the cat.gif initially
