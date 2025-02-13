@@ -63,20 +63,12 @@ function enlargeYesButton() {
     yesButton.style.fontSize = '200px';
 }
 
-function displayTopImage() {
-    var topImageContainer = document.getElementById('top-image-container');
-    var topImage = new Image();
-    topImage.src = 'IMG_7609.JPG'; 
-    topImage.alt = 'Top Image';
-    topImage.onload = function() {
-        topImageContainer.appendChild(topImage);
-    };
-}
+
 
 function displayCat() {
     var imageContainer = document.getElementById('image-container');
     var catImage = new Image();
-    catImage.src = 'cat.gif';
+    catImage.src = 'IMG_7609.JPG';
     catImage.alt = 'Cat';
     catImage.onload = function() {
         imageContainer.appendChild(catImage);
